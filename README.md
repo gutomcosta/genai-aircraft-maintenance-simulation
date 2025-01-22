@@ -12,6 +12,11 @@ Remember, to keep using this, you need to use the same chat to salve the context
 It was created in Portuguese, I generated an English version, but I don't know if it works as expected.
 Inside of **examples** folder, is an example of how to use this prompt in your simulation.
 
+An important tip:
+After pasting the instructions inside the chat, you could need to execute some fine-tuning. For example, if you ask for the chat: show me the technical log of D-AIHC. 
+The answer can be just a single entry. To improve this, you can ask for the chat something like this: can you simulate more technical log entries for D-AIHC?
+It allows the chat to add information about the aircraft in the log, so after that, you have more data to start.
+
 I tested the same prompt on ChatGPT, but, seems it works better on Gemini, but give it a try for ChatGPT and see the results.
 
 Below is a general description of how it works. 
