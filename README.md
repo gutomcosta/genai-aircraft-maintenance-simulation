@@ -1,4 +1,4 @@
-# Arcraft Maintenance Simulation
+# Aircraft Maintenance Simulation
 An attempt to build an airline maintenance simulation to improve the flight simulation experience based on gen-ai chat.
 
 This project is based on the Gemini prompt, which provides information about the operations of an Airbus A340-600 in the Lufthansa.
