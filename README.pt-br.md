@@ -20,6 +20,13 @@ Como o Gemini não vai guardar histórico, para continuar utilizando as informa�
 Originalmente este prompt foi criado em português, eu gerei uma versão em inglês, mas não sei se ela vai funcionar como esperado.
 Dentro da pasta **examples** tem alguns exemplos do uso deste prompt na simulação.
 
+Provalvelmente, depois de colar este prompt no chat, e perguntar algo como: mostre-me o log técnico da aeronave D-AIHC.
+Ele deve mostrar apenas uma entrada no log, pois ele não tem muito contexto ainda. Neste caso você pode pedir para ele simular diferentes entradas no log.
+Para isso você pode usar um comando como: Você pode simular mais entradas no log técnico da aeronave D-AIHC?
+Isso vai fazer que ele adicione mais entradas neste log.
+
+Para ficar mais realista, é interessante ir interagindo com o chat, e dando mais contexto e dados para ele conseguir gerar informações melhores.
+
 Eu testei esse prompt no ChatGPT também, mas os resultados do Gemini me pareceram melhores. De qualquer forma, acho que vale a pena você testar lá e ver se os resultados são melhores para você.
 
 Abaixo segue uma visão geral de como este chat funciona.
