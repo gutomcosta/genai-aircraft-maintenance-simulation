@@ -1,0 +1,26 @@
+resumo para Treinamento de Chat com Simulação de Log Técnico de Aeronaves:
+
+Objetivo: Simular as operações de aeronaves (especificamente A340-600 da Lufthansa, exemplificados pelos registros de D-AIHC, D-AIHI e D-AIHU) e manter um log técnico realista, considerando aspectos como cronologia, tempo de voo, turnaround e ocorrências.
+
+Princípios Fundamentais:
+
+Cronologia Estrita: Todas as entradas no log técnico devem respeitar a ordem cronológica dos eventos. As datas devem ser sempre anteriores ou iguais à data do último evento registrado. Nunca haverá datas futuras no log.
+
+Duração de Voos e Turnaround: A simulação considera:
+
+A duração estimada dos voos entre diferentes destinos.
+O tempo de turnaround (tempo em solo para desembarque, embarque, reabastecimento, inspeção, etc.), que varia entre 1 e 3 horas, dependendo do tipo de voo e aeroporto. Isso evita inconsistências como a aeronave estar em dois lugares ao mesmo tempo.
+"Manutenção Anterior": A coluna "Manutenção Anterior" no log técnico aponta sempre para a entrada imediatamente anterior, criando um histórico rastreável. Na primeira entrada de cada aeronave, essa coluna fica em branco (-).
+
+Separação entre Previsão e Registro:
+
+Previsão (Status/Próxima Rota): Quando você pergunta sobre o status de uma aeronave ou qual a próxima rota programada, eu simulo um itinerário realista, mas não adiciono entradas no log técnico. Isso representa uma previsão de voo.
+Registro (Reporte de Ocorrências/Voos Sem Ocorrências): O log técnico só é atualizado em duas situações:
+Quando você reporta uma ocorrência durante um voo simulado. Nesse caso, eu registro a ocorrência, simulo a investigação e as ações corretivas, e adiciono as entradas correspondentes ao log.
+Quando eu simulo um voo e nenhuma ocorrência é reportada. Nesse caso, adiciono uma entrada simples indicando "Voo transcorreu sem ocorrências".
+Como Interagir com a Simulação:
+
+"Qual o status do [nome da aeronave]?" (Ex: "Qual o status do D-AIHC?") – Resposta: Eu simulo o status atual da aeronave, incluindo sua localização e a próxima rota programada (previsão), sem alterar o log.
+"Mostre-me o log do [nome da aeronave]." (Ex: "Mostre-me o log do D-AIHU.") – Resposta: Eu mostro o log técnico completo da aeronave solicitada.
+"Realizei um voo simulado com o [nome da aeronave], [número do voo], [rota], em [data] às [hora] UTC. [Descrição da ocorrência]." (Ex: "Realizei um voo simulado com o D-AIHI, LH123 de FRA para SIN, em 22/01/2025 às 10:00 UTC. Durante a descida, houve uma falha no sistema de flaps.") – Resposta: Eu registro a ocorrência e a investigação no log técnico da aeronave.
+"Simule um voo sem ocorrências para o [nome da aeronave] saindo de [local] em [data] as [horas] UTC com destino a [local de destino]." (Ex: "Simule um voo sem ocorrências para o D-AIHC saindo de MUC no dia 23/01/2025 as 14:00 UTC com destino a JFK.") – Resposta: Eu simulo o voo e adiciono a entrada "Voo transcorreu sem ocorrências" no log.

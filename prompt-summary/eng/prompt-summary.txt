@@ -1,0 +1,48 @@
+Summary for Aircraft Technical Log Simulation (Lufthansa A340-600):
+
+Objective: Simulate the operations and maintenance of Lufthansa A340-600 aircraft (exemplified by D-AIHC, D-AIHI, and D-AIHU) and maintain a realistic technical log.
+
+Key Concepts:
+
+Chronology: The technical log follows a strict chronological order (past → present).
+Turnaround (Ground Time): Estimated time between flights for aircraft preparation (1-3 hours, depending on the route and airport).
+Adapted Real Routes: Simulated routes are based on historical data of real flights, adapted for the simulation's current context (2025 onwards), simulating that the aircraft are still in operation.
+Technical Log: A permanent record of occurrences and flights without occurrences.
+Interaction with the Simulation (3 Types):
+
+Request Status/Next Route (Forecast - DOES NOT change the Log):
+
+Command: "What is the status of [aircraft name]?" or "What is the next route of [aircraft name]?"
+Response: Gemini simulates the current status and the next route without modifying the log. This is a forecast.
+Report an Occurrence (Record - CHANGES the Log):
+
+Command: "I performed a simulated flight with [aircraft name], [flight number], [route], on [date] at [time] UTC. [Description of the occurrence]." (Ex: "I performed a simulated flight with D-AIHI, LH123 from FRA to SIN, on 2025-01-22 at 10:00 UTC. During descent, there was a failure in the flap system.")
+Response: Gemini records the occurrence in the log, simulates the investigation and corrective actions, adding the corresponding entries.
+Simulate Flight Without Occurrences (Record - CHANGES the Log):
+
+Command: "Simulate a flight without occurrences for [aircraft name] departing from [location] on [date] at [time] UTC to [destination]." (Ex: "Simulate a flight without occurrences for D-AIHC departing from MUC on 2025-01-23 at 14:00 UTC to JFK.")
+Response: Gemini simulates the flight and adds the entry "Flight proceeded without occurrences" to the log.
+Technical Log Format:
+
+Aircraft	Date (UTC)	Location	Last Route	Landing Time (UTC)	Occurrence Description	Corrective Actions	MEL Status	Next Maintenance	Previous Maintenance	Observations
+Ex: D-AIHC	Ex: 2025-01-15 14:00	Ex: In flight (LH505)	Ex: GRU-MUC	Ex: N/A	Ex: Small vibration in engine 3.	Ex: To be investigated.	Ex: N/A	Ex: 2025-03-15 (MUC)	Ex: -	Ex: Reported by the pilot.
+
+Export to Sheets
+Tips for using on Gemini:
+
+Specificity: Be as specific as possible in your commands.
+UTC Format: Use the UTC date and time format (YYYY-MM-DD HH:MM) to avoid ambiguities.
+Forecast/Record Distinction: Remember the difference between forecast (status/next route - DOES NOT change the log) and record (report occurrences/flights without occurrences - CHANGES the log).
+Log Consultation: Consult the technical log whenever necessary to check the aircraft's history.
+Historical Data-Based Simulation: You can request Gemini to simulate flights based on historical real route data.
+Complete Interaction Example:
+
+You: "What is the status of D-AIHC?"
+Gemini: (Simulates a flight and responds with the status, without changing the log).
+You: "I performed a simulated flight with D-AIHC, LH400 from MUC to JFK, on 2025-01-25 at 16:00 UTC. During the flight, the in-flight entertainment system (IFE) experienced intermittent failures."
+Gemini: (Records the occurrence in the log, simulates the investigation, and adds the corresponding entries).
+You: "Show me the log of D-AIHC."
+Gemini: (Shows the updated log with the recorded occurrence).
+You: "Simulate a flight without occurrences for D-AIHC departing from JFK on 2025-01-26 at 10:00 UTC to FRA."
+Gemini: (Simulates the flight and adds the entry "Flight proceeded without occurrences" to the log).
+This more concise summary with a complete interaction example should be even more helpful for other users to train with the simulation.

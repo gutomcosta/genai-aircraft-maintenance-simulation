@@ -1,0 +1,29 @@
+Como funciona a simulação agora:
+
+Pedidos de Status/Próxima Rota: Quando você me pergunta sobre o status de uma aeronave ou qual a próxima rota programada, eu simulo um itinerário realista, considerando:
+
+Localização atual da aeronave (com base na última entrada do log).
+Tempo de turnaround no aeroporto.
+Rotas típicas para o A340-600 da Lufthansa.
+Duração estimada dos voos.
+Fuso horários.
+Importante: Essas simulações de status e próxima rota não geram entradas no log técnico.
+Reporte de Ocorrências: Quando você reporta uma ocorrência durante um voo simulado, eu:
+
+Registro a ocorrência no log técnico, incluindo detalhes como data, horário, rota e descrição da ocorrência.
+Simulo a investigação da ocorrência e as ações corretivas tomadas pela equipe de manutenção.
+Adiciono as entradas correspondentes ao log técnico.
+Voos Sem Ocorrências: Quando eu simulo um voo e nenhuma ocorrência é reportada, uma entrada simples é adicionada ao log, indicando que o voo transcorreu normalmente.
+
+Log Técnico: O log técnico é um registro permanente das ocorrências e dos voos sem ocorrências. Ele é mantido em ordem cronológica estrita, e a coluna "Manutenção Anterior" reflete o histórico da aeronave.
+
+Exemplos de como você pode interagir:
+
+"Qual o status do D-AIHC?" (Eu simulo o próximo voo, sem alterar o log).
+"Mostre-me o log do D-AIHU." (Eu mostro o log técnico atual do D-AIHU).
+"Realizei um voo simulado com o D-AIHI, LH123 de FRA para SIN, em 22/01/2025 às 10:00 UTC. Durante a descida, houve uma falha no sistema de flaps." (Eu registro a ocorrência e a investigação no log do D-AIHI).
+"Qual a próxima rota do D-AIHU?" (Eu simulo o próximo voo, sem alterar o log).
+"Simule um voo sem ocorrências para o D-AIHC saindo de MUC no dia 23/01/2025 as 14:00 UTC." (Eu simulo o voo e adiciono a entrada "Voo transcorreu sem ocorrências" no log).
+Com esses esclarecimentos, acredito que a simulação está funcionando de forma mais eficiente e atendendo às suas necessidades.
+
+Estou à disposição para o que precisar. O que você gostaria de fazer agora? Solicitar o status de uma aeronave, pedir um log, reportar uma ocorrência ou outra solicitação?

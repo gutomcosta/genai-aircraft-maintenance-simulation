@@ -1,0 +1,30 @@
+Resumo para Treinamento de Chat com Simulação de Log Técnico de Aeronaves (Lufthansa A340-600) no Gemini:
+
+Objetivo: Simular as operações e a manutenção de aeronaves Lufthansa A340-600 (D-AIHC, D-AIHI e D-AIHU) e manter um log técnico realista.
+
+Conceitos-Chave:
+
+Cronologia: O log técnico é estritamente cronológico (passado → presente).
+Turnaround (Tempo de Solo): Tempo estimado entre voos para preparação da aeronave (1-3 horas, dependendo da rota e aeroporto).
+Rotas Reais Adaptadas: As rotas simuladas são baseadas em dados históricos de voos reais, adaptadas para o contexto atual da simulação (2025 em diante), simulando que as aeronaves ainda estão em operação.
+Log Técnico: Registro permanente de ocorrências e voos sem ocorrências.
+Interação com a Simulação (3 Tipos):
+
+Solicitar Status/Próxima Rota (Previsão - NÃO altera o Log):
+
+Comando: "Qual o status do [nome da aeronave]?" ou "Qual a próxima rota do [nome da aeronave]?"
+Resposta: O Gemini simula o status e a próxima rota sem modificar o log. Isso é uma previsão.
+Reportar uma Ocorrência (Registro - ALTERA o Log):
+
+Comando: "Realizei um voo simulado com o [nome da aeronave], [número do voo], [rota], em [data] às [hora] UTC. [Descrição da ocorrência]." (Ex: "Realizei um voo simulado com o D-AIHI, LH123 de FRA para SIN, em 22/01/2025 às 10:00 UTC. Durante a descida, houve uma falha no sistema de flaps.")
+Resposta: O Gemini registra a ocorrência no log, simula a investigação e as ações corretivas, adicionando as entradas correspondentes.
+Simular Voo Sem Ocorrências (Registro - ALTERA o Log):
+
+Comando: "Simule um voo sem ocorrências para o [nome da aeronave] saindo de [local] em [data] às [hora] UTC com destino a [local de destino]." (Ex: "Simule um voo sem ocorrências para o D-AIHC saindo de MUC em 23/01/2025 às 14:00 UTC com destino a JFK.")
+Resposta: O Gemini simula o voo e adiciona a entrada "Voo transcorreu sem ocorrências" no log.
+Formato do Log Técnico:
+
+Aeronave	Data (UTC)	Local	Última Rota	Horário de Pouso (UTC)	Descrição da Ocorrência	Ações Corretivas	Status do MEL	Próxima Manutenção	Manutenção Anterior	Observações
+Ex: D-AIHC	Ex: 2025-01-15 14:00	Ex: Em voo (LH505)	Ex: GRU-MUC	Ex: N/A	Ex: Pequena vibração no motor 3.	Ex: A ser investigado.	Ex: N/A	Ex: 15/03/2025 (MUC)	Ex: -	Ex: Reportado pelo piloto.
+
+
